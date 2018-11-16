@@ -1,0 +1,66 @@
+\hypertarget{menu_8h}{}\section{menu.\+h File Reference}
+\label{menu_8h}\index{menu.\+h@{menu.\+h}}
+
+
+Test;.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}data\+File.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sorting.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries D\+I\+S\+P\+L\+A\+Y\+\_\+\+M\+E\+NU}(menu\+Name)
+\item 
+\mbox{\Hypertarget{menu_8h_a102802426286136f7cd76b41530f67f5}\label{menu_8h_a102802426286136f7cd76b41530f67f5}} 
+\#define {\bfseries L\+I\+N\+E\+\_\+\+B\+R\+E\+AK}()~printf(\char`\"{}\textbackslash{}n\textbackslash{}n\char`\"{});
+\item 
+\mbox{\Hypertarget{menu_8h_ad51a54706d8c4cec2723ddd1d4756887}\label{menu_8h_ad51a54706d8c4cec2723ddd1d4756887}} 
+\#define {\bfseries C\+L\+E\+A\+R\+\_\+\+C\+O\+N\+S\+O\+LE}()~system(\char`\"{}cls\char`\"{});
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{menu_8h_a2f572b1e3af942d8c94719c419faab83}\label{menu_8h_a2f572b1e3af942d8c94719c419faab83}} 
+typedef void($\ast$ {\bfseries sorting\+Function}) (\mbox{\hyperlink{struct_lost_humain}{Lost\+Humain}} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{menu_8h_a11e783ecc8a85866c0a0f5a6bf5e9922}\label{menu_8h_a11e783ecc8a85866c0a0f5a6bf5e9922}} 
+void {\bfseries main\+Menu} (\mbox{\hyperlink{struct_lost_humain}{Lost\+Humain}} $\ast$)
+\item 
+\mbox{\Hypertarget{menu_8h_a4b468adeaf2cc6e529cf56f57b84a614}\label{menu_8h_a4b468adeaf2cc6e529cf56f57b84a614}} 
+sorting\+Function {\bfseries sorting\+Menu} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test;. 
+
+\begin{DoxyAuthor}{Author}
+Antonin 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12 novembre 2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{menu_8h_a6c64db8310335bd13b5c37a6be36dbc8}\label{menu_8h_a6c64db8310335bd13b5c37a6be36dbc8}} 
+\index{menu.\+h@{menu.\+h}!D\+I\+S\+P\+L\+A\+Y\+\_\+\+M\+E\+NU@{D\+I\+S\+P\+L\+A\+Y\+\_\+\+M\+E\+NU}}
+\index{D\+I\+S\+P\+L\+A\+Y\+\_\+\+M\+E\+NU@{D\+I\+S\+P\+L\+A\+Y\+\_\+\+M\+E\+NU}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{D\+I\+S\+P\+L\+A\+Y\+\_\+\+M\+E\+NU}{DISPLAY\_MENU}}
+{\footnotesize\ttfamily \#define D\+I\+S\+P\+L\+A\+Y\+\_\+\+M\+E\+NU(\begin{DoxyParamCaption}\item[{}]{menu\+Name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+printf( \textcolor{stringliteral}{"-----------------------------------------------\(\backslash\)n"} \(\backslash\)
+                                        \textcolor{stringliteral}{"       %s          \(\backslash\)n"} \(\backslash\)
+                                        \textcolor{stringliteral}{"-----------------------------------------------"}, menuName);
+\end{DoxyCode}
