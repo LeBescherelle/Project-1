@@ -1,0 +1,203 @@
+\hypertarget{menu_8h}{}\section{menu.\+h File Reference}
+\label{menu_8h}\index{menu.\+h@{menu.\+h}}
+
+
+Header du fichier de gestion des menus.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}data.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{menu_8h_aef8a6f1ca29e904445b82862b8f5c59c}{S\+C\+R\+E\+E\+N\+\_\+\+C\+L\+E\+AR}}()~system(\char`\"{}cls\char`\"{});
+\item 
+\#define \mbox{\hyperlink{menu_8h_a102802426286136f7cd76b41530f67f5}{L\+I\+N\+E\+\_\+\+B\+R\+E\+AK}}()~printf(\char`\"{}\textbackslash{}n\textbackslash{}n\char`\"{});
+\item 
+\#define \mbox{\hyperlink{menu_8h_a22a22d622e7fc9cbd1ddaccdad40e48b}{P\+A\+U\+SE}}()~system(\char`\"{}pause\char`\"{});
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8h_a93fc42d6f3d6b4bd7edd3949e3d942b3}{display\+\_\+menu}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$tab, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Affiche le menu principal. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{menu_8h_a59464165edd939347b088e6143156bd9}{get\+\_\+menu\+\_\+choice}} ()
+\begin{DoxyCompactList}\small\item\em Récupère le choix de l\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{menu_8h_a94e9d9006287503f0d4660d5d69032cf}{check\+\_\+input\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Récupère la valeur que l\textquotesingle{}utilisateur rentre, et vérifie que c\textquotesingle{}est bien un entier. Ferme le programme si la valeur n\textquotesingle{}est pas un entier. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{menu_8h_a97d8ddbcbd91d1f7cc3704f801f5c7f4}{display\+\_\+sort\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Affiche les menus de tris. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{menu_8h_a49851f9738afa221470d372c5d68f3ad}{choice\+\_\+execution}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$tab, size\+\_\+t size, int choice)
+\begin{DoxyCompactList}\small\item\em Exécute le choix de l\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{menu_8h_a36f209b658d0b43c417723b187664755}{sort\+\_\+exec}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$tab, size\+\_\+t size, int choice, int ascending)
+\begin{DoxyCompactList}\small\item\em Exécute le tri choisi par l\textquotesingle{}utilisateur. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{menu_8h_a50c8fdb43d9c73470869984d99bc4b64}{sub\+\_\+menu\+\_\+research}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$tab, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sous-\/menu pour effectuer une recherche de données. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{menu_8h_a3f526c2085c3ace7bde8792341a09ccc}{sub\+\_\+menu\+\_\+average}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$tab, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sous-\/menu pour calculer la moyenne dans un intervalle de temps donné. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header du fichier de gestion des menus. 
+
+\begin{DoxyAuthor}{Author}
+Antonin 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15 novembre 2018
+\end{DoxyDate}
+Contrôle l\textquotesingle{}affichage du menu et l\textquotesingle{}exécution des choix. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{menu_8h_a102802426286136f7cd76b41530f67f5}\label{menu_8h_a102802426286136f7cd76b41530f67f5}} 
+\index{menu.\+h@{menu.\+h}!L\+I\+N\+E\+\_\+\+B\+R\+E\+AK@{L\+I\+N\+E\+\_\+\+B\+R\+E\+AK}}
+\index{L\+I\+N\+E\+\_\+\+B\+R\+E\+AK@{L\+I\+N\+E\+\_\+\+B\+R\+E\+AK}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{L\+I\+N\+E\+\_\+\+B\+R\+E\+AK}{LINE\_BREAK}}
+{\footnotesize\ttfamily \#define L\+I\+N\+E\+\_\+\+B\+R\+E\+AK(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~printf(\char`\"{}\textbackslash{}n\textbackslash{}n\char`\"{});}
+
+\mbox{\Hypertarget{menu_8h_a22a22d622e7fc9cbd1ddaccdad40e48b}\label{menu_8h_a22a22d622e7fc9cbd1ddaccdad40e48b}} 
+\index{menu.\+h@{menu.\+h}!P\+A\+U\+SE@{P\+A\+U\+SE}}
+\index{P\+A\+U\+SE@{P\+A\+U\+SE}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+U\+SE}{PAUSE}}
+{\footnotesize\ttfamily \#define P\+A\+U\+SE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~system(\char`\"{}pause\char`\"{});}
+
+\mbox{\Hypertarget{menu_8h_aef8a6f1ca29e904445b82862b8f5c59c}\label{menu_8h_aef8a6f1ca29e904445b82862b8f5c59c}} 
+\index{menu.\+h@{menu.\+h}!S\+C\+R\+E\+E\+N\+\_\+\+C\+L\+E\+AR@{S\+C\+R\+E\+E\+N\+\_\+\+C\+L\+E\+AR}}
+\index{S\+C\+R\+E\+E\+N\+\_\+\+C\+L\+E\+AR@{S\+C\+R\+E\+E\+N\+\_\+\+C\+L\+E\+AR}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{S\+C\+R\+E\+E\+N\+\_\+\+C\+L\+E\+AR}{SCREEN\_CLEAR}}
+{\footnotesize\ttfamily \#define S\+C\+R\+E\+E\+N\+\_\+\+C\+L\+E\+AR(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~system(\char`\"{}cls\char`\"{});}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{menu_8h_a94e9d9006287503f0d4660d5d69032cf}\label{menu_8h_a94e9d9006287503f0d4660d5d69032cf}} 
+\index{menu.\+h@{menu.\+h}!check\+\_\+input\+\_\+int@{check\+\_\+input\+\_\+int}}
+\index{check\+\_\+input\+\_\+int@{check\+\_\+input\+\_\+int}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+input\+\_\+int()}{check\_input\_int()}}
+{\footnotesize\ttfamily static int check\+\_\+input\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Récupère la valeur que l\textquotesingle{}utilisateur rentre, et vérifie que c\textquotesingle{}est bien un entier. Ferme le programme si la valeur n\textquotesingle{}est pas un entier. 
+
+\begin{DoxyReturn}{Returns}
+int -\/ Entier rentré par l\textquotesingle{}utilisateur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menu_8h_a49851f9738afa221470d372c5d68f3ad}\label{menu_8h_a49851f9738afa221470d372c5d68f3ad}} 
+\index{menu.\+h@{menu.\+h}!choice\+\_\+execution@{choice\+\_\+execution}}
+\index{choice\+\_\+execution@{choice\+\_\+execution}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{choice\+\_\+execution()}{choice\_execution()}}
+{\footnotesize\ttfamily static void choice\+\_\+execution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{tab,  }\item[{size\+\_\+t}]{size,  }\item[{int}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Exécute le choix de l\textquotesingle{}utilisateur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tableau de données. \\
+\hline
+{\em size} & Taille du tableau de données. \\
+\hline
+{\em choice} & Choix de l\textquotesingle{}utilisateur. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8h_a93fc42d6f3d6b4bd7edd3949e3d942b3}\label{menu_8h_a93fc42d6f3d6b4bd7edd3949e3d942b3}} 
+\index{menu.\+h@{menu.\+h}!display\+\_\+menu@{display\+\_\+menu}}
+\index{display\+\_\+menu@{display\+\_\+menu}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{display\+\_\+menu()}{display\_menu()}}
+{\footnotesize\ttfamily void display\+\_\+menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{tab,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu principal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tableau de données. \\
+\hline
+{\em size} & Taille du tableau de données. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8h_a97d8ddbcbd91d1f7cc3704f801f5c7f4}\label{menu_8h_a97d8ddbcbd91d1f7cc3704f801f5c7f4}} 
+\index{menu.\+h@{menu.\+h}!display\+\_\+sort\+\_\+menu@{display\+\_\+sort\+\_\+menu}}
+\index{display\+\_\+sort\+\_\+menu@{display\+\_\+sort\+\_\+menu}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{display\+\_\+sort\+\_\+menu()}{display\_sort\_menu()}}
+{\footnotesize\ttfamily static void display\+\_\+sort\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Affiche les menus de tris. 
+
+\mbox{\Hypertarget{menu_8h_a59464165edd939347b088e6143156bd9}\label{menu_8h_a59464165edd939347b088e6143156bd9}} 
+\index{menu.\+h@{menu.\+h}!get\+\_\+menu\+\_\+choice@{get\+\_\+menu\+\_\+choice}}
+\index{get\+\_\+menu\+\_\+choice@{get\+\_\+menu\+\_\+choice}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+menu\+\_\+choice()}{get\_menu\_choice()}}
+{\footnotesize\ttfamily static int get\+\_\+menu\+\_\+choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Récupère le choix de l\textquotesingle{}utilisateur. 
+
+\begin{DoxyReturn}{Returns}
+int -\/ Choix de l\textquotesingle{}utilisateur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menu_8h_a36f209b658d0b43c417723b187664755}\label{menu_8h_a36f209b658d0b43c417723b187664755}} 
+\index{menu.\+h@{menu.\+h}!sort\+\_\+exec@{sort\+\_\+exec}}
+\index{sort\+\_\+exec@{sort\+\_\+exec}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{sort\+\_\+exec()}{sort\_exec()}}
+{\footnotesize\ttfamily static void sort\+\_\+exec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{tab,  }\item[{size\+\_\+t}]{size,  }\item[{int}]{choice,  }\item[{int}]{ascending }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Exécute le tri choisi par l\textquotesingle{}utilisateur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tableau des données. \\
+\hline
+{\em size} & Taille du tableau de données. \\
+\hline
+{\em choice} & Choix utilisateur entre tri par temps ou par bpm. \\
+\hline
+{\em ascending} & Boolean pour tri par ordre croissant ou décroissant. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8h_a3f526c2085c3ace7bde8792341a09ccc}\label{menu_8h_a3f526c2085c3ace7bde8792341a09ccc}} 
+\index{menu.\+h@{menu.\+h}!sub\+\_\+menu\+\_\+average@{sub\+\_\+menu\+\_\+average}}
+\index{sub\+\_\+menu\+\_\+average@{sub\+\_\+menu\+\_\+average}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{sub\+\_\+menu\+\_\+average()}{sub\_menu\_average()}}
+{\footnotesize\ttfamily static void sub\+\_\+menu\+\_\+average (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{tab,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sous-\/menu pour calculer la moyenne dans un intervalle de temps donné. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tableau des données. \\
+\hline
+{\em size} & Taille du tableau de données. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8h_a50c8fdb43d9c73470869984d99bc4b64}\label{menu_8h_a50c8fdb43d9c73470869984d99bc4b64}} 
+\index{menu.\+h@{menu.\+h}!sub\+\_\+menu\+\_\+research@{sub\+\_\+menu\+\_\+research}}
+\index{sub\+\_\+menu\+\_\+research@{sub\+\_\+menu\+\_\+research}!menu.\+h@{menu.\+h}}
+\subsubsection{\texorpdfstring{sub\+\_\+menu\+\_\+research()}{sub\_menu\_research()}}
+{\footnotesize\ttfamily static void sub\+\_\+menu\+\_\+research (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{tab,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sous-\/menu pour effectuer une recherche de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tableau des données. \\
+\hline
+{\em size} & Taille du tableau de données. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,195 @@
+\hypertarget{treatment_8c}{}\section{treatment.\+c File Reference}
+\label{treatment_8c}\index{treatment.\+c@{treatment.\+c}}
+
+
+Implémentation des fonctions de traitement des données.  
+
+
+{\ttfamily \#include \char`\"{}treatment.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{treatment_8c_a3f8f3b9ce70dca86e5f331e9d07a04b9}{display\+\_\+all\+\_\+data}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Affiche toutes les données enregistrées dans la structure de données. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{treatment_8c_a48cbfb967eba516ff12a65d90c7d44c7}{display\+\_\+all\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em Affiche toutes les lignes du fichier csv. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{treatment_8c_aba152ebdef21220a7224236d8d59d525}{compare\+\_\+time}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} first, \mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} second)
+\begin{DoxyCompactList}\small\item\em Fonction de comparaison du temps entre deux lignes de données. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{treatment_8c_a1ee3d9d6e76783a6f120a4a5ce1b8de5}{compare\+\_\+bpm}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} first, \mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} second)
+\begin{DoxyCompactList}\small\item\em Fonction de comparaison des bpm entre deux lignes de données. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{treatment_8c_a109852acf82d363f83e305fbad729306}{tab\+\_\+sort}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$tab, size\+\_\+t size, int($\ast$compare\+Function)(\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}}, \mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}}), int ascending)
+\begin{DoxyCompactList}\small\item\em Trie le tableau de données soit par ordre croissant soit par ordre décroissant. Prend une fonction de comparaison en paramètre. Utilise un tri par sélection O(n²). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} \mbox{\hyperlink{treatment_8c_ad11adbdd741992decec5a843f90ce256}{search\+\_\+bpm}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$tab, size\+\_\+t size, int time)
+\begin{DoxyCompactList}\small\item\em Recherche une valeur de bpm en fonction d\textquotesingle{}un temps. Utilise un algorithme de recherche séquentielle O(n). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{treatment_8c_a94e3292eb8006ccb0e2211adcbb542ed}{get\+\_\+average\+\_\+pulse}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$tab, size\+\_\+t size, int first\+Time, int second\+Time)
+\begin{DoxyCompactList}\small\item\em Calcule la moyenne de pouls dans un intervalle de temps. Utilise un algorithme de recherche séquentielle O(n). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{treatment_8c_a8b2d0f9da9bd2e9a84c681ed44ff0809}{display\+\_\+max\+\_\+min\+\_\+pulse}} (\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$tab, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Affiche le maximum et minimum du pouls enregistré. Utilise un algorithme de recherche séquentielle O(n). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implémentation des fonctions de traitement des données. 
+
+\begin{DoxyAuthor}{Author}
+Antonin 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15 novembre 2018
+\end{DoxyDate}
+Effectue des traitements sur les données. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{treatment_8c_a1ee3d9d6e76783a6f120a4a5ce1b8de5}\label{treatment_8c_a1ee3d9d6e76783a6f120a4a5ce1b8de5}} 
+\index{treatment.\+c@{treatment.\+c}!compare\+\_\+bpm@{compare\+\_\+bpm}}
+\index{compare\+\_\+bpm@{compare\+\_\+bpm}!treatment.\+c@{treatment.\+c}}
+\subsubsection{\texorpdfstring{compare\+\_\+bpm()}{compare\_bpm()}}
+{\footnotesize\ttfamily int compare\+\_\+bpm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}}}]{first,  }\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}}}]{second }\end{DoxyParamCaption})}
+
+
+
+Fonction de comparaison des bpm entre deux lignes de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Première ligne à comparer. \\
+\hline
+{\em second} & Deuxième ligne à comparer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ si return $>$ 0 alors first $>$ second. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{treatment_8c_aba152ebdef21220a7224236d8d59d525}\label{treatment_8c_aba152ebdef21220a7224236d8d59d525}} 
+\index{treatment.\+c@{treatment.\+c}!compare\+\_\+time@{compare\+\_\+time}}
+\index{compare\+\_\+time@{compare\+\_\+time}!treatment.\+c@{treatment.\+c}}
+\subsubsection{\texorpdfstring{compare\+\_\+time()}{compare\_time()}}
+{\footnotesize\ttfamily int compare\+\_\+time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}}}]{first,  }\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}}}]{second }\end{DoxyParamCaption})}
+
+
+
+Fonction de comparaison du temps entre deux lignes de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & Première ligne à comparer. \\
+\hline
+{\em second} & Deuxième ligne à comparer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ si return $>$ 0 alors first $>$ second. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{treatment_8c_a3f8f3b9ce70dca86e5f331e9d07a04b9}\label{treatment_8c_a3f8f3b9ce70dca86e5f331e9d07a04b9}} 
+\index{treatment.\+c@{treatment.\+c}!display\+\_\+all\+\_\+data@{display\+\_\+all\+\_\+data}}
+\index{display\+\_\+all\+\_\+data@{display\+\_\+all\+\_\+data}!treatment.\+c@{treatment.\+c}}
+\subsubsection{\texorpdfstring{display\+\_\+all\+\_\+data()}{display\_all\_data()}}
+{\footnotesize\ttfamily void display\+\_\+all\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Affiche toutes les données enregistrées dans la structure de données. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Tableau de données à afficher. \\
+\hline
+{\em size} & Taille du tableau. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{treatment_8c_a48cbfb967eba516ff12a65d90c7d44c7}\label{treatment_8c_a48cbfb967eba516ff12a65d90c7d44c7}} 
+\index{treatment.\+c@{treatment.\+c}!display\+\_\+all\+\_\+file@{display\+\_\+all\+\_\+file}}
+\index{display\+\_\+all\+\_\+file@{display\+\_\+all\+\_\+file}!treatment.\+c@{treatment.\+c}}
+\subsubsection{\texorpdfstring{display\+\_\+all\+\_\+file()}{display\_all\_file()}}
+{\footnotesize\ttfamily void display\+\_\+all\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche toutes les lignes du fichier csv. 
+
+\mbox{\Hypertarget{treatment_8c_a8b2d0f9da9bd2e9a84c681ed44ff0809}\label{treatment_8c_a8b2d0f9da9bd2e9a84c681ed44ff0809}} 
+\index{treatment.\+c@{treatment.\+c}!display\+\_\+max\+\_\+min\+\_\+pulse@{display\+\_\+max\+\_\+min\+\_\+pulse}}
+\index{display\+\_\+max\+\_\+min\+\_\+pulse@{display\+\_\+max\+\_\+min\+\_\+pulse}!treatment.\+c@{treatment.\+c}}
+\subsubsection{\texorpdfstring{display\+\_\+max\+\_\+min\+\_\+pulse()}{display\_max\_min\_pulse()}}
+{\footnotesize\ttfamily void display\+\_\+max\+\_\+min\+\_\+pulse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{tab,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Affiche le maximum et minimum du pouls enregistré. Utilise un algorithme de recherche séquentielle O(n). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tableau de données. \\
+\hline
+{\em size} & Taille du tableau de données. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{treatment_8c_a94e3292eb8006ccb0e2211adcbb542ed}\label{treatment_8c_a94e3292eb8006ccb0e2211adcbb542ed}} 
+\index{treatment.\+c@{treatment.\+c}!get\+\_\+average\+\_\+pulse@{get\+\_\+average\+\_\+pulse}}
+\index{get\+\_\+average\+\_\+pulse@{get\+\_\+average\+\_\+pulse}!treatment.\+c@{treatment.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+average\+\_\+pulse()}{get\_average\_pulse()}}
+{\footnotesize\ttfamily double get\+\_\+average\+\_\+pulse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{tab,  }\item[{size\+\_\+t}]{size,  }\item[{int}]{first\+Time,  }\item[{int}]{second\+Time }\end{DoxyParamCaption})}
+
+
+
+Calcule la moyenne de pouls dans un intervalle de temps. Utilise un algorithme de recherche séquentielle O(n). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tableau de données. \\
+\hline
+{\em size} & Taille du tableau de données. \\
+\hline
+{\em first\+Time} & Première borne de l\textquotesingle{}intervalle (temps). \\
+\hline
+{\em second\+Time} & Seconde borne de l\textquotesingle{}intervalle (temps). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double -\/ Moyenne de pouls dans l\textquotesingle{}intervalle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{treatment_8c_ad11adbdd741992decec5a843f90ce256}\label{treatment_8c_ad11adbdd741992decec5a843f90ce256}} 
+\index{treatment.\+c@{treatment.\+c}!search\+\_\+bpm@{search\+\_\+bpm}}
+\index{search\+\_\+bpm@{search\+\_\+bpm}!treatment.\+c@{treatment.\+c}}
+\subsubsection{\texorpdfstring{search\+\_\+bpm()}{search\_bpm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} search\+\_\+bpm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{tab,  }\item[{size\+\_\+t}]{size,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+
+
+Recherche une valeur de bpm en fonction d\textquotesingle{}un temps. Utilise un algorithme de recherche séquentielle O(n). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tableau où effectuer la recherche. \\
+\hline
+{\em size} & Taille du tableau. \\
+\hline
+{\em time} & Critère de temps où effectuer la recherche. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} -\/ Structure de la ligne trouvée. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{treatment_8c_a109852acf82d363f83e305fbad729306}\label{treatment_8c_a109852acf82d363f83e305fbad729306}} 
+\index{treatment.\+c@{treatment.\+c}!tab\+\_\+sort@{tab\+\_\+sort}}
+\index{tab\+\_\+sort@{tab\+\_\+sort}!treatment.\+c@{treatment.\+c}}
+\subsubsection{\texorpdfstring{tab\+\_\+sort()}{tab\_sort()}}
+{\footnotesize\ttfamily void tab\+\_\+sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}} $\ast$}]{tab,  }\item[{size\+\_\+t}]{size,  }\item[{int($\ast$)(\mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}}, \mbox{\hyperlink{struct_data___line}{Data\+\_\+\+Line}})}]{compare\+Function,  }\item[{int}]{ascending }\end{DoxyParamCaption})}
+
+
+
+Trie le tableau de données soit par ordre croissant soit par ordre décroissant. Prend une fonction de comparaison en paramètre. Utilise un tri par sélection O(n²). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tableau à trier. \\
+\hline
+{\em size} & Taille du tableau. \\
+\hline
+{\em compare\+Function} & Fonction de comparaison. \\
+\hline
+{\em ascending} & Si 1 alors tri par ordre croissant, 0 pour ordre décroissant. \\
+\hline
+\end{DoxyParams}
