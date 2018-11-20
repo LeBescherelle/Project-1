@@ -58,25 +58,11 @@ void ecrire_choix(int param)
             {
                 printf("0 impossible, la valeur sera defini par defaut sur 1\n");
                 a=1;
-            }
-            else
-            {
-                fprintf(pointeur, "\n%s %d", "#define param2", a);
-
-
-
-            }
+                
+            }            
+                fprintf(pointeur, "%s %d", "#define param2", a);
         }
-        else
-        {
-            fprintf(pointeur, "\n%s 0", "#define param2");
-
-        }
-
-
-
-
-    fclose(pointeur);
+      fclose(pointeur);
 }
 
 
